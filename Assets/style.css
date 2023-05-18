@@ -6,7 +6,7 @@ html {
 body {
   font-family: Arial, sans-serif;
   color: #fff;
-  background-color: #121212;
+  background-color: #ffffff;
 }
 
 a {
@@ -19,50 +19,24 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/* Navbar styles */
-.navbar {
-  background-color: #2c3e50;
-  border-bottom: none;
-}
-
-.navbar-brand .navbar-item {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-}
-
-.navbar-burger {
-  color: #fff;
-}
-
-.navbar-menu {
-  background-color: #2c3e50;
-  padding: 1rem 0;
-}
-
-.navbar-item {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-  margin-right: 1rem;
-}
-
-.navbar-item:hover {
-  background-color: #34495e;
-}
-
 /* Hero section styles */
 .hero {
-  background-image: url('./images/pexels-markus-spiske-4439901.jpg');
+  position: relative;
+  background-image: url('./images/code-583795.jpg');
   background-size: cover;
   background-position: center;
   padding: 5rem 0;
 }
 
-.has-background {
-  background-image: url('./images/pexels-markus-spiske-4439901.jpg');
-  background-size: cover;
-  background-position: center;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 .hero-body {
@@ -71,19 +45,48 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: #ffffff;
 }
 
 .hero .title {
   font-size: 4rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
+  color: #ffffff;
 }
 
 .hero .subtitle {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
+  color: #ffffff;
 }
+
+/* Navbar styles */
+.navbar.is-fixed-top {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-brand .navbar-item {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* 
+.navbar-menu {
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+
+.navbar-item {
+  color: #ffffff;
+}
+
+.navbar-burger {
+  color: #ffffff;
+}
+
+
 
 /* About section styles */
 #about {
@@ -124,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #work .card {
-  background-color: #2c3e50;
+  background-color: #89CFF0;
   color: #fff;
   height: 100%;
   display: flex;
@@ -139,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #work .card-footer {
-  background-color: #34495e;
+  background-color: #89CFF0;
 }
 
 #work .card-footer-item {
@@ -262,4 +265,70 @@ h1, h2, h3, h4, h5, h6 {
 
 .foot-social-icons .fa:hover {
   color: #9c4668;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  /* Hero section */
+  .hero .title {
+    font-size: 2.5rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.5rem;
+  }
+  
+  /* About section */
+  .section .column.is-two-thirds {
+    flex: 100%;
+  }
+  
+  .section .column {
+    flex: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Hero section */
+  .hero .title {
+    font-size: 3rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.8rem;
+  }
+  
+  /* About section */
+  .section .column.is-two-thirds {
+    flex: 70%;
+  }
+  
+  .section .column {
+    flex: 30%;
+    margin-bottom: 0;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1025px) {
+  /* Hero section */
+  .hero .title {
+    font-size: 4rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 2rem;
+  }
+  
+  /* About section */
+  .section .column.is-two-thirds {
+    flex: 60%;
+  }
+  
+  .section .column {
+    flex: 40%;
+    margin-bottom: 0;
+  }
 }
