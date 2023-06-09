@@ -52,14 +52,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 4rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
-  color: #ffffff;
 }
 
 .hero .subtitle {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  color: #ffffff;
 }
 
 /* Navbar styles */
@@ -88,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-menu {
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: flex-end;
 }
 
 /* Burger Menu */
@@ -119,12 +117,12 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: #ffffff; /* Set initial white background color */
-  transition: background-color 0.3s ease; /* Add transition effect */
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
 }
 
 .sticky.off-white {
-  background-color: #e7e7e7; /* Set off-white background color when scrolled */
+  background-color: #bebebe;
 }
 
 /* About section styles */
@@ -154,16 +152,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Section Divider */
-
 .section-divider-container {
-  width: 25%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the container horizontally */
+  width: 25%;
+  margin: 0 auto;
 }
 
 .section-divider {
   border: none;
   border-top: 1px solid #000000;
-  margin: 2rem 0; /* Apply margin above and below the line */
+  margin: 2rem 0;
 }
 
 /* Work section styles */
@@ -183,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #work .card {
-  background-color: #89CFF0;
+  background-color: #bebebe;
   color: #fff;
   height: 100%;
   display: flex;
@@ -198,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #work .card-footer {
-  background-color: #89CFF0;
+  background-color: #bebebe;
 }
 
 #work .card-footer-item {
@@ -275,7 +272,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Footer */
-
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -310,8 +306,30 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-/* Social Icons */
+.contact-container {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.contact-buttons .button {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .button.is-linkedin {
+    display: none;
+  }
+}
+
+/* Social Icons */
 .foot-social-icons .fa {
   color: #f2f2f2;
   font-size: 1.5rem;
@@ -348,7 +366,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 }
-
 
 /* Tablet styles */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -395,7 +412,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Custom styles */
-
 .sticky-header {
   position: sticky;
   top: 0;
@@ -420,4 +436,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .sticky-header .navbar-burger {
   color: #000000;
+}
+
+.my-custom-class {
+  /* Add your custom styles here */
 }
